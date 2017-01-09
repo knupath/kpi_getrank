@@ -18,7 +18,7 @@ extern "C" __knu_kernel void getrank(int test_arg)
 
     // Send a single word to the host, containing the tDSP "rank" within
     // the launch.
-    // 
+    //
     // When sending to the host, we can put whatever we would like in the
     // flit address bits. Here, we use the physical ID.
     KPI_Send_Host(&rank, 1, KPI_Physical_ID());
@@ -29,12 +29,8 @@ Each tDSP determines its rank by calling the KPI_Rank() function, and sends
 that value to the host (along with is physical ID, obtained using the
 KPI_Physical_ID() function).
 
-We can run kpi_getrank as follows:
-
-~~~~~~~~~~~~{.bash}
-export KNU_DEVICE=sdb045
-/opt/knupath/examples/kpi/bin/kpi_getrank
-~~~~~~~~~~~~
+Build and run:
+  1) Provide this git URL into KWS and click 'Run'.
 
 The output is shown below.
 
